@@ -6,133 +6,153 @@
     <title>HTML Documentation</title>
     <link href="styles.css" rel="stylesheet">
     <style>
-      :root {
-        --header: #4B5CD7;
-        --header-text: #fffffe;
-        --welcome-page1: #17112A;
-        --welcome-page2: #071672;
-        --projects: #024E68;
-        --tile-block: #5f6c7b;
-        --tile-text: #fffffe;
-      }
       * {
         box-sizing: border-box;
-        /*border: 1px solid;*/
-        margin: 0;
-        padding: 0;
-        font-family: "Roboto", sans-serif;
       }
-      header {
-        height: 60px;
-        position: fixed;
-        width: 100vw;
-        background-color: var(--header);
-        box-shadow: 0 3px 4px;
-        z-index: 3;
-      }
-      #navbar ul {
-        display: flex;
-        justify-content: center;
-        list-style: none;
+      nav {
+        width: 25%;
         height: 100%;
+        border: 2px solid #656464;
+        background: #5c5c5c;
+        color: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
       }
-      #navbar {
-        width: 50vw;
-        float: right;
-      }
-      #navbar ul li {
-        color: var(--header-text);
+      nav header {
+        padding: 6px;
         font-size: 1.2em;
         font-weight: bold;
-        height: 100%;
-        padding: 0 20px;
-        display: flex;
-        place-items: center; 
+      }
+      nav ul {
+        width: 100%;
+        margin: 0;
+        padding-inline-start: 0;
+      }
+      body {
+        margin: 0;
+        font-family: Helvetica;
       }
       a {
         text-decoration: none;
       }
-      #navbar ul a li:hover {
-        color: var(--header);
-        background-color: var(--header-text);
-        transition: all 0.3s ease-in-out;
+      nav li:hover{
+        color: #5c5c5c;
+        background: #f2f2f2;
       }
-      #welcome-section {
-        position: relative;
-        top: 60px;
+      nav li {
+        list-style: none;
+        color: #f2f2f2;
+        border-bottom: 2px solid #656464;
         width: 100%;
-        height: 830px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(62deg, var(--welcome-page2), var(--welcome-page1));
-        text-align: center;
+        padding: 5px 15px;
       }
-      html {
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-      }
-      .name h1 {
-        font-size: 4em;
-        color: white;
-      }
-      .name p {
-        font-size: 2.2em;
-        color: var(--header);
-        padding: 20px 0;
-      }
-      hr {
-        color: white;
-        margin: 0 450px;
-      }
-      #projects {
-        position: relative;
-        background-color: var(--projects);
-        width: 100vw;
-      }
-      .project-tiles {
-        display: flex;
-        justify-content: space-evenly;
-        height: 620px;
-        place-items: center;
-      }
-      h2 {
-        font-size: 2.6rem;
-        text-align: center;
-        color: white;
-        padding: 20px 0;
-        margin-top: 60px;
-        position: relative;
-        top: 20px; 
-      }
-      .project-tile {
-        width: 420px;
-        height: 460px;
-        margin: 20px 0;
-        box-shadow: 3px 3px 3px #000;
-      }
-      img {
-        object-fit: cover;
-        width: 420px;
-        height: 400px;
-      }
-      .text {
-        color: var(--tile-text);
-        height: 60px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      nav header {
+        border-bottom: 2px solid #656464;
+        padding: 5px 15px;
         font-size: 1.4em;
-        background-color: var(--tile-block);
       }
-      .project-tile:hover {
-        transform: scale(1.05);
-        transition: all 0.2s ease-in-out;
+      #main-doc {
+        position: relative;
+        left: 26%;
+        width: 74%; 
+        padding: 0 20px;
       }
-      #img2 {
-        object-fit: fill;
+      header {
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding: 15px 0 0 12px;
       }
+      p, ul {
+        color: #5c5c5c;
+      }
+      .main-section li {
+        color: #5c5c5c;
+        margin: 7px 0;
+      }
+      .main-section ul {
+        position: relative;
+        left: 20px;
+      }
+      h1:not(.example h1) {
+        padding: 5px 0 0 23px;
+        font-size: 1.3em;
+        font-weight: 500;
+      }
+      code, .code {
+        color: black;
+        background-color: #f1f1f1;
+        padding: 2px;
+        font-family: Consolas,"courier new";
+      }
+      .code {
+        padding: 20px !important;
+        margin: -5px 10px -10px 15px;
+      }
+      div:not(.example) {
+        color: #f1f1f1;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      #tomato {
+        background-color: tomato;
+      } 
+      #Orange {
+        background-color: Orange;
+      }
+      #DodgerBlue {
+        background-color: DodgerBlue;
+      }
+      #MediumSeaGreen {
+        background-color: MediumSeaGreen;
+      }
+      .example {
+        border: 3px dashed #5c5c5c;
+        background-color: #eeeeee;
+        height: auto;
+        margin: 20px 10px -10px 15px;
+      }
+      .example ul, .example ul li, .example ol li {
+        padding: 0;
+        margin: 0;
+        color: black;
+      }
+      .example ol  {
+        color: black;
+        margin: 0; 
+        padding-left: 22px; 
+      }
+      @media (max-width: 800px) {
+        nav {
+          width: 195px;
+        }
+        #main-doc {
+          left: 210px;
+          width: calc(100% - 210px);
+        }
+      }
+      @media (min-width: 1100px) {
+        nav {
+          width: 270px;
+        }
+        #main-doc {
+          left: 285px;
+        }
+      }
+      @media (max-width: 550px) {
+        nav {
+          display: none;
+        }
+        #main-doc {
+          width: 100%;
+          left: 0;
+        }
+      } 
     </style>
   </head>
   <body>
