@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Documentation</title>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+      :root {
+        --header: #4B5CD7;
+        --header-text: #fffffe;
+        --welcome-page1: #17112A;
+        --welcome-page2: #071672;
+        --projects: #024E68;
+        --tile-block: #5f6c7b;
+        --tile-text: #fffffe;
+      }
+      * {
+        box-sizing: border-box;
+        /*border: 1px solid;*/
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+      }
+      header {
+        height: 60px;
+        position: fixed;
+        width: 100vw;
+        background-color: var(--header);
+        box-shadow: 0 3px 4px;
+        z-index: 3;
+      }
+      #navbar ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        height: 100%;
+      }
+      #navbar {
+        width: 50vw;
+        float: right;
+      }
+      #navbar ul li {
+        color: var(--header-text);
+        font-size: 1.2em;
+        font-weight: bold;
+        height: 100%;
+        padding: 0 20px;
+        display: flex;
+        place-items: center; 
+      }
+      a {
+        text-decoration: none;
+      }
+      #navbar ul a li:hover {
+        color: var(--header);
+        background-color: var(--header-text);
+        transition: all 0.3s ease-in-out;
+      }
+      #welcome-section {
+        position: relative;
+        top: 60px;
+        width: 100%;
+        height: 830px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(62deg, var(--welcome-page2), var(--welcome-page1));
+        text-align: center;
+      }
+      html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+      .name h1 {
+        font-size: 4em;
+        color: white;
+      }
+      .name p {
+        font-size: 2.2em;
+        color: var(--header);
+        padding: 20px 0;
+      }
+      hr {
+        color: white;
+        margin: 0 450px;
+      }
+      #projects {
+        position: relative;
+        background-color: var(--projects);
+        width: 100vw;
+      }
+      .project-tiles {
+        display: flex;
+        justify-content: space-evenly;
+        height: 620px;
+        place-items: center;
+      }
+      h2 {
+        font-size: 2.6rem;
+        text-align: center;
+        color: white;
+        padding: 20px 0;
+        margin-top: 60px;
+        position: relative;
+        top: 20px; 
+      }
+      .project-tile {
+        width: 420px;
+        height: 460px;
+        margin: 20px 0;
+        box-shadow: 3px 3px 3px #000;
+      }
+      img {
+        object-fit: cover;
+        width: 420px;
+        height: 400px;
+      }
+      .text {
+        color: var(--tile-text);
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4em;
+        background-color: var(--tile-block);
+      }
+      .project-tile:hover {
+        transform: scale(1.05);
+        transition: all 0.2s ease-in-out;
+      }
+      #img2 {
+        object-fit: fill;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>
+          HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
+        </p>
+        <p>
+          "Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to pages created by other people, you become an active participant in the World Wide Web.
+        </p>
+        <p>
+          HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as <code>head, title, body, header, footer, article, section, p, div, span, img, aside, audio, canvas, datalist, details, embed, nav, search, output, progress, video, ul, ol, li </code> and many others.
+        </p>
+        <p>
+          An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "<" and ">". The name of an element inside a tag is case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the <code>title</code> tag can be written as Title, TITLE, or in any other way. However, the convention and recommended practice is to write tags in lowercase.
+        </p>
+        </section>
+        <section class="main-section" id="HTML_Attributes">
+        <header>HTML Attributes</header>
+          <ul>
+            <li>All HTML elements can have attributes</li>
+            <li>Attributes provide additional information about elements</li>
+            <li>Attributes are always specified in the start tag</li>
+            <li>Attributes usually come in name/value pairs like: name="value"</li>
+          </ul>
+          <h1>The href Attribute</h1>
+          <p>The <code>&lta&gt</code> tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to. For example,</p>
+          <p class="code">
+            &lta href="https://www.w3schools.com"&gtVisit W3Schools&lt/a&gt 
+          </p>
+          <h1>The src Attribute</h1>
+          <p>The <code>&ltimg&gt</code> tag is used to embed an image in an HTML page. The src attribute specifies the path to the image to be displayed. For example,</p>
+          <p class="code">&ltimg src="img_girl.jpg"&gt</p>
+          <h1>The style Attribute</h1>
+          <p>The <code>&ltstyle&gt</code> attribute is used to add styles to an element, such as color, font, size, and more.</p>
+          <p class="code">&ltp style="color:red;">This is a red paragraph.&lt/p&gt</p>
+          <h1>The title Attribute</h1>
+          <p>The <code>&lttitle&gt</code> attribute defines some extra information about an element.</p>
+          <p>The value of the title attribute will be displayed as a tooltip when you mouse over the element. For example,</p>
+          <p class="code">&ltp title="I'm a tooltip">This is a paragraph.&lt/p&gt</p>
+      </section>
+      <section class="main-section" id="HTML_Colors">
+        <header>HTML Colors</header>
+        <h1>Color Names</h1>
+        <p>In HTML, a color can be specified by using a color name. For example,</p>
+        <div id="tomato">Tomato</div>
+        <div id="Orange">Orange</div>
+        <div id="DodgerBlue">DodgerBlue</div>
+        <div id="MediumSeaGreen">MediumSeaGreen</div>
+        <h1>Background Color</h1>
+        <p>You can set the background color for HTML elements. For example,</p>
+        <p class="code">&lth1 style="background-color:DodgerBlue;"&gtHello World&lt/h1&gt</p>
+        <div class="example"><h1 style="background-color:DodgerBlue;">Hello World</h1></div>
+        <h1>Text Color</h1>
+        <p>You can set the color of text. For example,</p>
+        <p class="code">&lth1 style="color:Tomato;"&gtHello World&lt/h1&gt</p>
+        <div class="example"><h1 style="color:Tomato;">Hello World</h1></div>
+        <h1>Border Color</h1>
+         <p>You can set the color of borders:</p>
+         <p class="code">&lth1 style="border:2px solid Tomato;"&gtHello World&lt/h1&gt</p>
+         <div class="example"><h1 style="border:2px solid Tomato;">Hello World</h1></div>
+      </section>
+      <section class="main-section" id="Lists">
+        <header>Lists</header>
+        <p>HTML lists allow web developers to group a set of related items in lists.</p>
+        <h1>Unordered HTML List</h1>
+        <p>An unordered list starts with the <code>&ltul&gt</code> tag. Each list item starts with the <code>&ltli&gt</code> tag.</p>
+        <p>The list items will be marked with bullets (small black circles) by default.  For example,</p>
+        <div class="example">
+          <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+          </ul>
+        </div>
+        <h1>Ordered HTML List</h1>
+        <p>An ordered list starts with the <code>&ltol&gt</code> tag. Each list item starts with the <code>&ltli&gt</code> tag.</p>
+        <p>The list items will be marked with numbers by default:</p>
+        <div class="example">
+          <ol>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+          </ol>
+        </div>
+      </section>
+      <section class="main-section" id="HTTP_Methods">
+        <header>HTTP Methods</header>
+        <h1>What is HTTP?</h1>
+        <p>The Hypertext Transfer Protocol (HTTP) is designed to enable communications between clients and servers.
+        </p>
+        <p>HTTP works as a request-response protocol between a client and server.
+        </p>
+        <p>
+          Example: A client (browser) sends an HTTP request to the server; then the server returns a response to the client. The response contains status information about the request and may also contain the requested content.
+        </p>
+        <h1>The GET Method</h1>
+        <p>GET is used to request data from a specified resource.</p>
+        <p>
+          Note that the query string (name/value pairs) is sent in the URL of a GET request:
+        </p>
+        <p class="code">
+          /test/demo_form.php?name1=value1&name2=value2
+        </p>
+        <ul>
+          Some notes on GET requests:
+          <li>GET requests can be cached
+</li>
+          <li>GET requests remain in the browser history
+</li>
+          <li>GET requests can be bookmarked
+</li>
+          <li>GET requests should never be used when dealing with sensitive data
+</li>
+          <li>GET requests have length restrictions
+</li>
+          <li>GET requests are only used to request data (not modify)
+</li>
+        </ul>
+        <h1>The POST Method</h1>
+        <p>POST is used to send data to a server to create/update a resource.</p>
+        <p>The data sent to the server with POST is stored in the request body of the HTTP request:</p>
+        <p class="code">
+          POST /test/demo_form.php HTTP/1.1
+Host: w3schools.com
+
+name1=value1&name2=value2
+        </p>
+        <ul>Some notes on POST requests:
+          <li>POST requests are never cached
+</li>
+          <li>POST requests do not remain in the browser history
+</li>
+          <li>POST requests cannot be bookmarked
+</li>
+          <li>POST requests have no restrictions on data length
+</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <p>All the documentation in this page is taken from<a href="https://www.w3schools.com/"> W3schools</a>.</p>
+      </section>
+    </main>    
+    <nav id="navbar">
+      <header>HTML Documentation</header>
+      <ul>
+        <a href="#Introduction" class="nav-link"><li>Introduction</li></a>
+        <a href="#HTML_Attributes" class="nav-link"><li>HTML Attributes</li></a>
+        <a href="#HTML_Colors" class="nav-link"><li>HTML Colors</li></a>
+        <a href="#Lists" class="nav-link"><li>Lists</li></a>
+        <a href="#HTTP_Methods" class="nav-link"><li>HTTP Methods</li></a>
+        <a href="#Reference" class="nav-link"><li>Reference</li></a>
+      </ul>
+    </nav>
+  </body>
+</html>
